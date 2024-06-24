@@ -453,6 +453,9 @@ footer{
     font-weight: 600;
     color: #FFF;
 }
+.img-duvidas{
+    margin-top: 80px;
+}
 @media (max-width: 768px){
     nav ul{
         overflow-x: scroll;
@@ -504,6 +507,21 @@ footer{
         padding: 0;
         flex-direction: column-reverse;
     }
+    .title-percurso{
+        width: 100%;
+        display: flex;
+    }
+    .title-percurso img{
+        width: 95%;
+        margin: auto;
+    }
+    .title-kit{
+        width: 100%;
+        display: flex;
+    }
+    .title-kit img{
+        width: 50%;
+    }
     .info-percurso{
         margin: 0;
         padding: 0px 10px 30px 10px;
@@ -552,6 +570,12 @@ footer{
 .texto-regulamento{
     padding: 10px;
 }
+.title-regulamento{
+    width: 100%;
+}
+.title-regulamento div h1 img{
+    width: 30%;
+}
     .wrapper-fale-conosco{
         display: flex;
         flex-wrap: wrap;
@@ -575,6 +599,12 @@ footer{
     }
     .copy-ticket{
         padding: 18px 10px;
+    }
+    .img-duvidas{
+        width: 100%;
+    }
+    .img-duvidas img{
+        width: 70%;
     }
 }
 @media (max-width: 425px){
