@@ -478,10 +478,11 @@ footer{
         margin-left: 5px;
     }
     .container-inicio{
-        background: url(imagens/Testeira-SP-mobile.svg);
+        background: url(imagens/Testeira-RJ-mobile.jpg);
         width: 100%;
-        max-width: 768px;
-        background-size: cover;
+        max-width: 768px;        
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .accountant{
         width: 100%;
