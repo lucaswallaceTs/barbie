@@ -1,6 +1,7 @@
 body{
     font-family: "League Gothic", sans-serif;
     margin: 0px;
+    box-sizing: border-box;
 }
 main{
     display: flex;
@@ -19,6 +20,7 @@ header nav{
     position: fixed;
     background-color: #FFF;
     z-index: 100;
+    margin-bottom: 0px;
 }
 header nav ul {
 display: flex;
@@ -26,12 +28,23 @@ max-width: 740px;
 width: 100%;
 justify-content: space-around;
 list-style-type: none;
+margin-bottom: 0px;
+flex-wrap: nowrap;
 }
 header nav ul li{
     font-size: 20px;
     cursor: pointer;
     font-weight: 400;
+    padding-bottom: 11px;
 }
+nav ul li a{
+    text-decoration: none;
+    color: #432638;
+}
+nav ul li a.active {
+    border-bottom: 4px solid #18C0DB;
+  }
+
 .container-inicio{
     width: 100%;
     display: flex;
@@ -41,7 +54,7 @@ header nav ul li{
     margin: auto;
     height: 567px;
     max-width: 1440px;
-    background: url(imagens/barbie-banner-1.svg);
+    background: url(imagens/barbie-banner-rj.svg);
 }
 .container-accountant{
 width: 100%;
@@ -99,10 +112,10 @@ margin: 0px 0px 32px 0px;
     background-color:#E5EAEB ;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .wrapper-encontro h1{
-    font-size: 80px;
-    
+    font-size: 80px;    
     margin: 0;
     text-align: left;
     color: white;
@@ -167,6 +180,15 @@ margin: 0px 0px 32px 0px;
     color: #432638;
     font-size: 16px;
 }
+.mapa-percurso img{
+    max-width: 600px;
+}
+.mapa-percurso #mapa-img{
+    border: 4px solid #FE3CB7;
+    box-shadow: 8px 8px 0px 0px #FE3CB7;
+    border-radius: 24px;
+
+}
 .button-percurso{
     margin: 32px 0px 0px 0px;
     display: flex;
@@ -193,6 +215,21 @@ margin: 0px 0px 32px 0px;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.image-kit{
+    z-index: 1;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.image-kit img{
+    width: 80%;
+    max-width: 600px;
+}
+.style-barbie{
+    box-shadow: 8px 8px 0px 0px #18C0DB;
+    border-radius: 24px;
 }
 .wrapper-kit{
     max-width: 1200px;
@@ -227,7 +264,7 @@ margin: 0px 0px 32px 0px;
     margin: 0px 12px 0px 12px;
     cursor: pointer;
 }
-.button-kit-vip{
+.button-kit-select{
     background-color: #FFF200;
 }
 .background-kit{
@@ -417,6 +454,35 @@ footer{
     color: #FFF;
 }
 @media (max-width: 768px){
+    nav ul{
+        overflow-x: scroll;
+        padding: 0px 10px;
+    }
+    nav ul::-webkit-scrollbar {
+        height: 2px;
+    }
+    nav ul li div{
+        width: 110px;
+    }
+    ul li div:first-child{
+        text-align: left;
+    }
+    .menu-style{
+        width: 50px;
+    }
+    .menu-style-1{
+        width: 70px;
+    }
+    .menu-style-2{
+        width: 90px;
+        margin-left: 5px;
+    }
+    .container-inicio{
+        background: url(imagens/Testeira-SP-mobile.svg);
+        width: 100%;
+        max-width: 768px;
+        background-size: cover;
+    }
     .accountant{
         width: 100%;
     }
@@ -435,9 +501,17 @@ footer{
     .wrapper-percurso{
         flex-wrap: wrap;
         padding: 0;
+        flex-direction: column-reverse;
     }
     .info-percurso{
-        flex-basis: 100%;
+        margin: 0;
+        padding: 0px 10px 30px 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .button-percurso{
+        justify-content: center;
     }
     .mapa-percurso{
         width: 100%;
@@ -469,8 +543,14 @@ footer{
         width: 80%;
         display: flex;
         margin: auto;    
+        max-width: 450px;
 }
-
+.button-kit{
+    justify-content: center;
+}
+.texto-regulamento{
+    padding: 10px;
+}
     .wrapper-fale-conosco{
         display: flex;
         flex-wrap: wrap;
@@ -486,6 +566,9 @@ footer{
         width: calc(100% - 112px);
         border-radius: 0;
     }
+    .wrapper-form form button{
+        margin: 26px auto auto auto;
+    }
     .fale-conosco, footer{
         padding: 0;
     }
@@ -494,6 +577,11 @@ footer{
     }
 }
 @media (max-width: 425px){
+    .container-inicio{
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 330px;
+    }
     .button-kit{
         flex-wrap: wrap;
     }
